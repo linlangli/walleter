@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">钱包</string>
+    <string name="bottom_bar_main">明细</string>
+    <string name="bottom_bar_chart">图表</string>
+    <string name="bottom_bar_assets">资产</string>
+    <string name="bottom_bar_plan">计划</string>
+    <string name="outlay">支出</string>
+    <string name="income">收入</string>
+    <string name="balance">结余</string>
+    <string name="phone">通讯</string>
+    <string name="repast">伙食</string>
+    <string name="renting">租房</string>
+</resources>
