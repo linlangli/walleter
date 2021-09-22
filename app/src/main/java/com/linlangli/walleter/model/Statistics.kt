@@ -1,4 +1,4 @@
-package com.linlangli.walleter.modal
+package com.linlangli.walleter.model
 
 import androidx.databinding.ObservableField
 

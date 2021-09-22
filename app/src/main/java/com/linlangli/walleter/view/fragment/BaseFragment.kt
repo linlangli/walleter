@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.linlangli.walleter.viewmodal.BaseViewModal
+import com.linlangli.walleter.viewmodel.BaseViewModel
 
 abstract class BaseFragment<DB : ViewDataBinding> : Fragment() {
 
@@ -38,6 +38,6 @@ abstract class BaseFragment<DB : ViewDataBinding> : Fragment() {
 
     abstract fun iniData()
 
-    fun <T : BaseViewModal> getVM(clazz : Class<T>) : T
+    fun <T : BaseViewModel> getVM(clazz : Class<T>) : T
             = ViewModelProvider(this).get(clazz)
 }

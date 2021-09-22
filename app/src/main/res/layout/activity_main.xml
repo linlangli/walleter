@@ -8,8 +8,8 @@
             type="com.linlangli.walleter.view.activity.MainActivity.ClickEvent"
             name="clickEvent"/>
         <variable
-            name="mainViewModal"
-            type="com.linlangli.walleter.viewmodal.MainViewModal"/>
+            name="mainViewModel"
+            type="com.linlangli.walleter.viewmodel.MainViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,7 +43,7 @@
             android:id="@+id/image_main"
             android:layout_width="0dp"
             android:layout_height="25dp"
-            android:src="@{mainViewModal.selected == &quot;main&quot;?@drawable/ic_main_selected:@drawable/ic_main}"
+            android:src="@{mainViewModel.selected == &quot;main&quot;?@drawable/ic_main_selected:@drawable/ic_main}"
             android:paddingBottom="2dp"
             app:layout_constraintBottom_toTopOf="@+id/text_main"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
 
         <ImageView
             android:id="@+id/image_plan"
-            android:src="@{mainViewModal.selected == &quot;plan&quot;?@drawable/ic_plan_selected:@drawable/ic_plan}"
+            android:src="@{mainViewModel.selected == &quot;plan&quot;?@drawable/ic_plan_selected:@drawable/ic_plan}"
             android:layout_width="0dp"
             android:layout_height="25dp"
             android:paddingStart="5dp"
@@ -89,7 +89,7 @@
             android:id="@+id/image_chart"
             android:layout_width="0dp"
             android:layout_height="25dp"
-            android:src="@{mainViewModal.selected == &quot;chart&quot;?@drawable/ic_chart_selected:@drawable/ic_chart}"
+            android:src="@{mainViewModel.selected == &quot;chart&quot;?@drawable/ic_chart_selected:@drawable/ic_chart}"
             app:layout_constraintBottom_toTopOf="@id/text_chart"
             app:layout_constraintEnd_toStartOf="@id/image_assets"
             app:layout_constraintStart_toEndOf="@id/image_plan"
@@ -111,7 +111,7 @@
             android:id="@+id/image_assets"
             android:layout_width="0dp"
             android:layout_height="25dp"
-            android:src="@{mainViewModal.selected == &quot;assets&quot;?@drawable/ic_assets_selected:@drawable/ic_assets}"
+            android:src="@{mainViewModel.selected == &quot;assets&quot;?@drawable/ic_assets_selected:@drawable/ic_assets}"
             app:layout_constraintBottom_toTopOf="@id/text_assets"
             app:layout_constraintStart_toEndOf="@id/image_chart"
             app:layout_constraintEnd_toEndOf="parent"

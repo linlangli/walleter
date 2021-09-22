@@ -7,8 +7,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
-import com.linlangli.walleter.viewmodal.BaseViewModal
 import com.linlangli.walleter.utils.SharePer
+import com.linlangli.walleter.viewmodel.BaseViewModel
 
 
 abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {
@@ -50,7 +50,7 @@ abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {
         } catch (ignore:Exception) {}
     }
 
-    fun <T : BaseViewModal> getVM(clazz : Class<T>) : T
+    fun <T : BaseViewModel> getVM(clazz : Class<T>) : T
         = ViewModelProvider(this).get(clazz)
 
 }

@@ -5,7 +5,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.ActivityMainBinding
 import com.linlangli.walleter.utils.Loger
-import com.linlangli.walleter.viewmodal.MainViewModal
+import com.linlangli.walleter.viewmodel.MainViewModel
+import kotlinx.coroutines.flow.collect
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -15,7 +16,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         Loger.e("测试", "MainActivity_resultCode: ${it.resultCode}")
     }
 
-    lateinit var mainViewModal : MainViewModal
+    lateinit var mainViewModel : MainViewModel
 
     override fun layoutId() = R.layout.activity_main
 
@@ -24,14 +25,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun iniView() {
         Loger.e("🚀")
         binder.clickEvent = ClickEvent()
-        mainViewModal.selected.set("main")
+        mainViewModel.selected.set("main")
         nav(R.id.toMainFragment)
     }
 
     override fun iniData() {
-        mainViewModal = getVM(MainViewModal::class.java)
-        mainViewModal.selected.set("main")
-        binder.mainViewModal = mainViewModal
+        mainViewModel = getVM(MainViewModel::class.java)
+        mainViewModel.selected.set("main")
+        binder.mainViewModel = mainViewModel
     }
 
     override fun navControllerId() = R.id.fragment_nav
@@ -44,22 +45,22 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             when(view.id) {
                 R.id.view_main -> {
                     Loger.e("layout_bottom_bar_main")
-                    mainViewModal.selected.set("main")
+                    mainViewModel.selected.set("main")
                     nav(R.id.toMainFragment)
                 }
                 R.id.view_chart -> {
                     Loger.e("layout_bottom_bar_chart")
-                    mainViewModal.selected.set("chart")
+                    mainViewModel.selected.set("chart")
                     nav(R.id.toChartFragment)
                 }
                 R.id.view_assets ->  {
                     Loger.e("layout_bottom_bar_asserts")
-                    mainViewModal.selected.set("assets")
+                    mainViewModel.selected.set("assets")
                     nav(R.id.toAssertsFragment)
                 }
                 R.id.view_plan -> {
                     Loger.e("layout_bottom_bar_clock")
-                    mainViewModal.selected.set("plan")
+                    mainViewModel.selected.set("plan")
                     nav(R.id.toPlanFragment)
                 }
             }
