@@ -2,6 +2,7 @@ package com.linlangli.walleter.view.activity
 
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
+import com.linlangli.pangtouyu.view.activity.BaseActivity
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.ActivityMainBinding
 import com.linlangli.walleter.utils.Loger
@@ -33,6 +34,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         mainViewModel = getVM(MainViewModel::class.java)
         mainViewModel.selected.set("main")
         binder.mainViewModel = mainViewModel
+    }
+
+    suspend fun test() {
+        mainViewModel.loadingChange.showDialog.collect {
+
+        }
     }
 
     override fun navControllerId() = R.id.fragment_nav

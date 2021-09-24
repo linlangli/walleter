@@ -1,2 +1,3 @@
 rootProject.name = "walleter"
 include ':app'
+include ':pangtouyu'

@@ -1,4 +1,4 @@
-package com.linlangli.walleter.view.fragment
+package com.linlangli.pangtouyu.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.linlangli.walleter.viewmodel.BaseViewModel
+import com.linlangli.pangtouyu.viewmodel.BaseViewModel
 
 abstract class BaseFragment<DB : ViewDataBinding> : Fragment() {
 

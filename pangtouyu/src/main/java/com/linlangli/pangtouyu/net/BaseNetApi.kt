@@ -1,4 +1,4 @@
-package com.linlangli.walleter.net
+package com.linlangli.pangtouyu.net
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

@@ -1,4 +1,4 @@
-package com.linlangli.walleter.utils
+package com.linlangli.pangtouyu.utils
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -6,8 +6,7 @@ import android.content.SharedPreferences
 object SharePer {
 
     fun <T>set(context : Context, name : String, content : Map<String, T>) {
-        val sharedPreferences: SharedPreferences =
-            context.getSharedPreferences(name, Context.MODE_PRIVATE)
+        val sharedPreferences: SharedPreferences = getSP(context, name)
         val editor: SharedPreferences.Editor = sharedPreferences.edit()
         for(key in content.keys) {
             when {
@@ -29,6 +28,10 @@ object SharePer {
             }
         }
         editor.apply()
+    }
+
+    fun getSP(context : Context, name : String) : SharedPreferences {
+        return context.getSharedPreferences(name, Context.MODE_PRIVATE)
     }
 
     fun clear(context : Context, name : String) {

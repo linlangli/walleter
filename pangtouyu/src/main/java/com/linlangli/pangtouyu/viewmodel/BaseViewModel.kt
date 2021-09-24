@@ -1,4 +1,4 @@
-package com.linlangli.walleter.viewmodel
+package com.linlangli.pangtouyu.viewmodel
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

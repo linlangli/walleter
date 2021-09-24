@@ -1,9 +1,9 @@
 package com.linlangli.walleter.view.fragment
 
+import com.linlangli.pangtouyu.view.fragment.BaseFragment
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.FragmentMainBinding
-import com.linlangli.walleter.ext.init
-import com.linlangli.walleter.model.Statistics
+import com.linlangli.pangtouyu.ext.init
 import com.linlangli.walleter.view.adapter.MainAdapter
 
 

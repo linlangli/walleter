@@ -1,4 +1,4 @@
-package com.linlangli.walleter.ext
+package com.linlangli.pangtouyu.ext
 
 import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager

@@ -1,4 +1,4 @@
-package com.linlangli.walleter.net
+package com.linlangli.pangtouyu.net
 
 class NetException : Exception {
 

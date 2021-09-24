@@ -1,4 +1,4 @@
-package com.linlangli.walleter.net
+package com.linlangli.pangtouyu.net
 
 enum class ErrorCode(private val code: Int, private val err: String) {
 
@@ -9,21 +9,21 @@ enum class ErrorCode(private val code: Int, private val err: String) {
     /**
      * 解析错误
      */
-    PARSE_ERRORCode(1001, "解析错误，请稍后再试"),
+    PARSE_ERROR(1001, "解析错误，请稍后再试"),
     /**
      * 网络错误
      */
-    NETWORK_ERRORCode(1002, "网络连接错误，请稍后重试"),
+    NETWORK_ERROR(1002, "网络连接错误，请稍后重试"),
 
     /**
      * 证书出错
      */
-    SSL_ERRORCode(1004, "证书出错，请稍后再试"),
+    SSL_ERROR(1004, "证书出错，请稍后再试"),
 
     /**
      * 连接超时
      */
-    TIMEOUT_ERRORCode(1006, "网络连接超时，请稍后重试");
+    TIMEOUT_ERROR(1006, "网络连接超时，请稍后重试");
 
     fun getValue(): String {
         return err

@@ -1,5 +1,6 @@
 package com.linlangli.walleter.view.fragment
 
+import com.linlangli.pangtouyu.view.fragment.BaseFragment
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.FragmentAssetsBinding
 import com.linlangli.walleter.utils.Loger

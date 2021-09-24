@@ -1,9 +1,9 @@
-package com.linlangli.walleter.ext
+package com.linlangli.pangtouyu.ext
 
 import androidx.lifecycle.viewModelScope
-import com.linlangli.walleter.net.BaseResponse
-import com.linlangli.walleter.net.NetException
-import com.linlangli.walleter.viewmodel.BaseViewModel
+import com.linlangli.pangtouyu.net.BaseResponse
+import com.linlangli.pangtouyu.net.NetException
+import com.linlangli.pangtouyu.viewmodel.BaseViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope

@@ -2,8 +2,8 @@ package com.linlangli.walleter.view.adapter
 
 import android.content.Context
 import android.util.SparseIntArray
+import com.linlangli.pangtouyu.view.adapter.BaseAdapter
 import com.linlangli.walleter.databinding.ItemMainBinding
-import com.linlangli.walleter.model.Statistics
 import com.linlangli.walleter.utils.Loger
 
 class MainAdapter(

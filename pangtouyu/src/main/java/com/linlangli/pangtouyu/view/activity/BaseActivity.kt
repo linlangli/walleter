@@ -1,4 +1,4 @@
-package com.linlangli.walleter.view.activity
+package com.linlangli.pangtouyu.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
+import com.linlangli.pangtouyu.viewmodel.BaseViewModel
 import com.linlangli.walleter.utils.SharePer
-import com.linlangli.walleter.viewmodel.BaseViewModel
 
 
 abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {

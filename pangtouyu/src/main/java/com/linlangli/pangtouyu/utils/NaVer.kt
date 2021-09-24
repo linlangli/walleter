@@ -1,4 +1,4 @@
-package com.linlangli.walleter.utils
+package com.linlangli.pangtouyu.utils
 
 import android.os.Bundle
 import android.view.View
