@@ -7,8 +7,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
+import com.linlangli.pangtouyu.utils.SharePer
 import com.linlangli.pangtouyu.viewmodel.BaseViewModel
-import com.linlangli.walleter.utils.SharePer
 
 
 abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {

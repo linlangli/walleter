@@ -53,6 +53,7 @@ dependencies {
 
     api 'androidx.lifecycle:lifecycle-process:2.2.0'
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
+    api 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
 
     // net
     api "com.squareup.okhttp3:okhttp:4.2.2"

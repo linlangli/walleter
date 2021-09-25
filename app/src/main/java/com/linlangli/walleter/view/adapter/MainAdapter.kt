@@ -4,13 +4,14 @@ import android.content.Context
 import android.util.SparseIntArray
 import com.linlangli.pangtouyu.view.adapter.BaseAdapter
 import com.linlangli.walleter.databinding.ItemMainBinding
+import com.linlangli.walleter.model.Bill
 import com.linlangli.walleter.utils.Loger
 
 class MainAdapter(
     context : Context?,
     layoutId : Int,
-    dataList : List<Statistics>)
-    : BaseAdapter<Statistics, ItemMainBinding>(
+    dataList : List<Bill>)
+    : BaseAdapter<Bill, ItemMainBinding>(
         context,
         layoutId,
         dataList
@@ -22,9 +23,9 @@ class MainAdapter(
     override fun handle(
         holder: BaseViewHolder<ItemMainBinding>,
         position: Int,
-        data: Statistics
+        data: Bill
     ) {
         Loger.e("测试","handle")
-        holder.binder.textStatisticsContent.text = data.content.get()
+        holder.binder.textStatisticsContent.text = data.desc
     }
 }

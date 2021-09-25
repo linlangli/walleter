@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Walleter"
         tools:ignore="AllowBackup">
-        <activity android:name=".view.activity.LoginActivity">
+        <activity android:name=".view.activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

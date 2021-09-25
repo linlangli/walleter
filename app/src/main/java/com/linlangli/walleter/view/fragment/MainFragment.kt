@@ -4,6 +4,7 @@ import com.linlangli.pangtouyu.view.fragment.BaseFragment
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.FragmentMainBinding
 import com.linlangli.pangtouyu.ext.init
+import com.linlangli.walleter.model.Bill
 import com.linlangli.walleter.view.adapter.MainAdapter
 
 
@@ -18,9 +19,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     }
 
     override fun iniData() {
-        val statistics = Statistics()
-        statistics.content.set("100")
-        val data = listOf(statistics)
+        val data = listOf(Bill("test", "123", "test", "test", 12f))
 
         binder.recyclerMain.init(
             context,

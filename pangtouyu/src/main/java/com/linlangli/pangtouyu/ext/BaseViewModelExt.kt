@@ -26,15 +26,41 @@ fun <T> BaseViewModel.request(
             //网络请求成功 关闭弹窗
             loadingChange.dismissDialog.value = false
             runCatching {
-                //校验请求结果码是否正确，不正确会抛出异常走下面的onFailure
+                // 返回码校验
                 executeResponse(it) { t -> success(t) }
             }.onFailure { e ->
-                //打印错误消息
+                // 校验失败
+                error(NetException.getNetException(e))
             }
         }.onFailure {
             //网络请求异常 关闭弹窗
             loadingChange.dismissDialog.value = false
-            //打印错误消息
+            error(NetException.getNetException(it))
+        }
+    }
+}
+
+fun <T> BaseViewModel.requestNoCheck(
+    block: suspend () -> T,
+    success: (T?) -> Unit,
+    error: (NetException) -> Unit = {},
+    isShowDialog: Boolean = false,
+    loadingMessage: String = "请求网络中..."
+): Job {
+    //如果需要弹窗 通知Activity/fragment弹窗
+    return viewModelScope.launch {
+        runCatching {
+            if (isShowDialog) loadingChange.showDialog.value = loadingMessage
+            //请求体
+            block()
+        }.onSuccess {
+            //网络请求成功 关闭弹窗
+            loadingChange.dismissDialog.value = false
+            success(it)
+        }.onFailure {
+            //网络请求异常 关闭弹窗
+            loadingChange.dismissDialog.value = false
+            error(NetException.getNetException(it))
         }
     }
 }
@@ -49,7 +75,7 @@ suspend fun <T> executeResponse(
                 success(response.getResponseData())
             }
             else -> {
-                throw NetException(
+                throw NetException.getNetException(
                     response.getResponseCode(),
                     response.getResponseMsg(),
                 )
