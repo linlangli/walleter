@@ -10,4 +10,9 @@
     <string name="phone">通讯</string>
     <string name="repast">伙食</string>
     <string name="renting">租房</string>
+    <string name="user_id">用户ID</string>
+    <string name="user_password">用户密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="retrieve_password">找回密码</string>
 </resources>

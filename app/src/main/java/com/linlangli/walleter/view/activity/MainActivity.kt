@@ -42,7 +42,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
     }
 
-    override fun navControllerId() = R.id.fragment_nav
+    override fun navControllerId() = R.id.fragment_nav_main
 
     inner class ClickEvent {
         private var flag = -1

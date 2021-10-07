@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,6 +11,77 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wallet"
+            app:layout_constraintBottom_toTopOf="@id/edit_user"
+            app:layout_constraintStart_toStartOf="@id/edit_user"
+            app:layout_constraintEnd_toEndOf="@id/edit_user"
+            android:layout_marginBottom="30dp"/>
+
+        <EditText
+            android:id="@+id/edit_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="150dp"
+            android:autofillHints="用户ID"
+            android:inputType="number"
+            android:hint="@string/user_id"
+            android:textSize="12sp"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/edit_user"
+            app:layout_constraintTop_toBottomOf="@id/edit_user"
+            app:layout_constraintEnd_toEndOf="@id/edit_user"
+            android:layout_marginTop="20dp"
+            android:autofillHints="用户密码"
+            android:hint="@string/user_password"
+            android:inputType="textPassword"
+            android:textSize="12sp"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/butt_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edit_password"
+            app:layout_constraintStart_toStartOf="@id/edit_user"
+            app:layout_constraintEnd_toEndOf="@id/edit_user"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/butt_login"
+            android:text="@string/login"/>
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/butt_login"
+            app:layout_constraintStart_toStartOf="@id/edit_user"
+            android:textColor="@color/black"
+            android:text="@string/register"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/text_register"
+            app:layout_constraintEnd_toEndOf="@id/edit_user"
+            android:text="@string/retrieve_password"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

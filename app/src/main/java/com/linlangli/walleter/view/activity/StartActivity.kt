@@ -1,9 +1,9 @@
 package com.linlangli.walleter.view.activity
 
-import android.content.Intent
 import com.linlangli.pangtouyu.view.activity.BaseActivity
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.ActivityStartBinding
+import com.linlangli.walleter.utils.Loger
 import java.util.*
 
 class StartActivity : BaseActivity<ActivityStartBinding>() {
@@ -14,8 +14,8 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
     override fun iniView() {
         Timer().schedule(object: TimerTask(){
             override fun run() {
-                startActivity(Intent(this@StartActivity, MainActivity::class.java))
-                finish()
+                Loger.e("schedule")
+                nav(R.id.toLoginFragment)
             }
         },5000)
     }
@@ -23,5 +23,5 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
     override fun iniData() {
     }
 
-    override fun navControllerId() = -1
+    override fun navControllerId() = R.id.fragment_nav_start
 }

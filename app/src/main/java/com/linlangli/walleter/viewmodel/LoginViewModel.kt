@@ -11,8 +11,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 
 class LoginViewModel : BaseViewModel(){
 
-    lateinit var loginSuccess : MutableStateFlow<User?>
-    lateinit var loginFailure : MutableStateFlow<NetException?>
+    var loginSuccess : MutableStateFlow<User?> = MutableStateFlow(null)
+    var loginFailure : MutableStateFlow<NetException?> = MutableStateFlow(null)
 
     fun login(userid : String, password : String, sp : SharedPreferences?) {
         if (sp != null) {
