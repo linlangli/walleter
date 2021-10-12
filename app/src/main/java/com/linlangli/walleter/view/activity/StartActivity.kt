@@ -17,7 +17,7 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
                 Loger.e("schedule")
                 nav(R.id.toLoginFragment)
             }
-        },5000)
+        },3000)
     }
 
     override fun iniData() {

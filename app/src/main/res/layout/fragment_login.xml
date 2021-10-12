@@ -5,7 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="loginClickEvent"
+            type="com.linlangli.walleter.view.fragment.LoginFragment.LoginClickEvent" />
+        <variable
+            name="loginViewModel"
+            type="com.linlangli.walleter.viewmodel.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -61,6 +66,7 @@
             app:layout_constraintEnd_toEndOf="@id/edit_user"
             android:layout_marginTop="15dp"
             android:background="@drawable/butt_login"
+            android:onClick="@{(view) -> loginClickEvent.login(view)}"
             android:text="@string/login"/>
 
         <TextView
@@ -71,17 +77,20 @@
             app:layout_constraintStart_toStartOf="@id/edit_user"
             android:textColor="@color/black"
             android:text="@string/register"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
+            android:onClick="@{(view) -> loginClickEvent.register(view)}"
             android:textSize="12sp"/>
 
         <TextView
+            android:id="@+id/text_retrievePass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@id/text_register"
             app:layout_constraintEnd_toEndOf="@id/edit_user"
             android:text="@string/retrieve_password"
             android:textColor="@color/black"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:visibility="gone"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -21,10 +21,14 @@ object Loger {
     }
 
     fun d(msg: String) {
-        Log.e(Exception().stackTrace[1].className, msg)
+        Log.d(Exception().stackTrace[1].className, msg)
     }
 
     fun d(tag: String, msg: String) {
-        Log.e(tag, msg)
+        Log.d(tag, msg)
+    }
+
+    fun d(tag: String, method : String,  msg: String) {
+        Log.e("[$tag] 🚀", "[$method] 🚗 | $msg")
     }
 }
