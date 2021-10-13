@@ -17,4 +17,6 @@ class PlanFragment : BaseFragment<FragmentPlanBinding>(){
     override fun iniData() {
         Loger.e("ClockFragment")
     }
+
+    override fun navControllerId() = -1
 }

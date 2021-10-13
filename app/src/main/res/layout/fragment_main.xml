@@ -1,122 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="mainViewModel"
+            type="com.linlangli.walleter.viewmodel.MainViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <View
-            android:id="@+id/view_top"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/theme_dart"/>
-
-        <TextView
-            android:id="@+id/text_year"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_income"
-            android:layout_marginStart="15dp"
-            android:text="2021年"
-            android:textColor="@android:color/black"/>
-
-        <TextView
-            android:id="@+id/text_day"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/text_year"
-            app:layout_constraintTop_toBottomOf="@id/text_year"
-            android:textSize="10sp"
-            android:text="8月31日"
-            tools:ignore="SmallSp" />
-
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/ic_open"
-            app:layout_constraintStart_toEndOf="@id/text_day"
-            app:layout_constraintTop_toTopOf="@id/text_day"
-            app:layout_constraintBottom_toBottomOf="@id/text_day" />
-
-        <TextView
-            android:id="@+id/text_income"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="5dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/text_outlay"
-            android:text="@string/income"
-            android:layout_marginStart="25dp"
-            android:textSize="10sp"
-            tools:ignore="SmallSp" />
-        <TextView
-            android:id="@+id/text_income_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/text_income"
-            app:layout_constraintStart_toStartOf="@id/text_income"
-            android:text="100.00"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="5dp"
-            android:textSize="12sp"/>
-
-        <TextView
-            android:id="@+id/text_outlay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/text_income"
-            app:layout_constraintStart_toEndOf="@id/text_income"
-            app:layout_constraintEnd_toStartOf="@id/text_balance"
-            android:text="@string/outlay"
-            android:textSize="10sp"
-            tools:ignore="SmallSp" />
-        <TextView
-            android:id="@+id/text_outlay_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/text_outlay"
-            app:layout_constraintTop_toTopOf="@id/text_income_value"
-            app:layout_constraintStart_toStartOf="@id/text_outlay"
-            android:text="@string/outlay"
-            android:textColor="@android:color/black"
-            android:textSize="12sp"/>
-
-        <TextView
-            android:id="@+id/text_balance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/text_income"
-            app:layout_constraintStart_toEndOf="@id/text_outlay"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:text="@string/balance"
-            android:textSize="10sp"
-            tools:ignore="SmallSp" />
-        <TextView
-            android:id="@+id/text_balance_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/text_balance"
-            app:layout_constraintStart_toStartOf="@id/text_balance"
-            app:layout_constraintTop_toTopOf="@id/text_income_value"
-            android:text="@string/outlay"
-            android:textColor="@android:color/black"
-            android:textSize="12sp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_main"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/view_top"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_height="match_parent"
+        tools:context=".view.activity.MainActivity">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

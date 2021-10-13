@@ -18,4 +18,6 @@ class ChartFragment : BaseFragment<FragmentChartBinding>(){
         Loger.e("ChartFragment")
     }
 
+    override fun navControllerId() = -1
+
 }

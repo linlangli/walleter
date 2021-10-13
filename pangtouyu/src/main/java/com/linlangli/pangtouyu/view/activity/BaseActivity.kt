@@ -15,20 +15,17 @@ abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {
 
     lateinit var binder: DB
 
-    private lateinit var mainNvController : NavController
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (useDB()) {
-            binder = DataBindingUtil.setContentView(this, layoutId())
-            setContentView(binder.root)
-        } else {
-            setContentView(layoutId())
-        }
+        binder = DataBindingUtil.setContentView(this, layoutId())
+        setContentView(binder.root)
         val navControllerId = navControllerId()
         if (navControllerId != -1) {
-            mainNvController = findNavController(this, navControllerId())
+            navController = findNavController(this, navControllerId())
         }
+        initVM()
         iniData()
         iniView()
         SharePer.set(this, "name", mapOf("1" to "test", "ted" to "test"))
@@ -36,7 +33,7 @@ abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {
 
     abstract fun layoutId() : Int
 
-    abstract fun useDB() : Boolean
+    abstract fun initVM()
 
     abstract fun iniView()
 
@@ -46,7 +43,7 @@ abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() {
 
     fun nav(id : Int){
         try {
-            mainNvController.navigate(id)
+            navController.navigate(id)
         } catch (ignore:Exception) {}
     }
 

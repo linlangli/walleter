@@ -1,70 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation_main"
     app:startDestination="@id/mainFragment">
 
-
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.linlangli.walleter.view.fragment.MainFragment"
         android:label="MainFragment">
         <action
-            android:id="@+id/toChartFragment"
+            android:id="@+id/mainFragment2ChartFragment"
             app:destination="@id/chartFragment"/>
         <action
-            android:id="@+id/toAssertsFragment"
+            android:id="@+id/mainFragment2AssertsFragment"
             app:destination="@id/assertsFragment"/>
         <action
-            android:id="@+id/toPlanFragment"
+            android:id="@+id/mainFragment2PlanFragment"
             app:destination="@id/planFragment"/>
+        <action
+            android:id="@+id/mainFragment2BillFragment"
+            app:destination="@id/billFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/billFragment"
+        android:name="com.linlangli.walleter.view.fragment.BillFragment"
+        android:label="BillFragment">
     </fragment>
 
     <fragment
         android:id="@+id/chartFragment"
         android:name="com.linlangli.walleter.view.fragment.ChartFragment"
         android:label="ChartFragment">
-        <action
-            android:id="@+id/toMainFragment"
-            app:destination="@id/mainFragment"/>
-        <action
-            android:id="@+id/toAssertsFragment"
-            app:destination="@id/assertsFragment"/>
-        <action
-            android:id="@+id/toPlanFragment"
-            app:destination="@id/planFragment"/>
     </fragment>
 
     <fragment
         android:id="@+id/assertsFragment"
         android:name="com.linlangli.walleter.view.fragment.AssetsFragment"
         android:label="AssetsFragment">
-        <action
-            android:id="@+id/toMainFragment"
-            app:destination="@id/mainFragment"/>
-        <action
-            android:id="@+id/toPlanFragment"
-            app:destination="@id/planFragment"/>
-        <action
-            android:id="@+id/toChartFragment"
-            app:destination="@id/chartFragment"/>
     </fragment>
 
     <fragment
         android:id="@+id/planFragment"
         android:name="com.linlangli.walleter.view.fragment.PlanFragment"
         android:label="ClockFragment">
-        <action
-            android:id="@+id/toMainFragment"
-            app:destination="@id/mainFragment"/>
-        <action
-            android:id="@+id/toAssertsFragment"
-            app:destination="@id/assertsFragment"/>
-        <action
-            android:id="@+id/toChartFragment"
-            app:destination="@id/chartFragment"/>
     </fragment>
-
 
 </navigation>

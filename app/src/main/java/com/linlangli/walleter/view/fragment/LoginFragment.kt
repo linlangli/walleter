@@ -85,4 +85,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(){
 
         }
     }
+
+    override fun navControllerId() = -1
 }
