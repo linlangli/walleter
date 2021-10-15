@@ -4,6 +4,7 @@ import com.linlangli.pangtouyu.view.fragment.BaseFragment
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.FragmentBillBinding
 import com.linlangli.walleter.model.Bill
+import com.linlangli.walleter.utils.Loger
 import com.linlangli.walleter.view.adapter.MainAdapter
 
 class BillFragment : BaseFragment<FragmentBillBinding>() {
@@ -16,17 +17,6 @@ class BillFragment : BaseFragment<FragmentBillBinding>() {
     }
 
     override fun iniData() {
-//        val data = listOf(Bill("test", "123", "test", "test", 12f))
-
-//        binder.recyclerMain.init(
-//            context,
-//            MainAdapter(
-//                context,
-//                R.layout.item_main,
-//                data
-//            )
-//        )
+        Loger.d("iniData")
     }
-
-    override fun navControllerId() = -1
 }

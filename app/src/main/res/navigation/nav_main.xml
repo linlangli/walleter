@@ -4,23 +4,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.linlangli.walleter.view.fragment.MainFragment"
         android:label="MainFragment">
         <action
-            android:id="@+id/mainFragment2ChartFragment"
+            android:id="@+id/mainFragment2chartFragment"
             app:destination="@id/chartFragment"/>
         <action
-            android:id="@+id/mainFragment2AssertsFragment"
+            android:id="@+id/mainFragment2assertsFragment"
             app:destination="@id/assertsFragment"/>
         <action
-            android:id="@+id/mainFragment2PlanFragment"
+            android:id="@+id/mainFragment2planFragment"
             app:destination="@id/planFragment"/>
         <action
-            android:id="@+id/mainFragment2BillFragment"
+            android:id="@+id/mainFragment2billFragment"
             app:destination="@id/billFragment"/>
     </fragment>
 
@@ -44,8 +44,21 @@
 
     <fragment
         android:id="@+id/planFragment"
-        android:name="com.linlangli.walleter.view.fragment.PlanFragment"
+        android:name="com.linlangli.walleter.view.fragment.MineFragment"
         android:label="ClockFragment">
     </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.linlangli.walleter.view.fragment.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/toLoginFragment"
+        app:destination="@id/loginFragment"/>
 
 </navigation>

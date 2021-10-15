@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="theme_light">#8a8c8e</color>
-    <color name="theme_dart">#ffc20e</color>
+    <color name="theme_dart">#426ab3</color>
+    <color name="theme_dart_yellow">#FFCF06</color>
 </resources>

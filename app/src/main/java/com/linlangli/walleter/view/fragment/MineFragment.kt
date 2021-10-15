@@ -2,11 +2,11 @@ package com.linlangli.walleter.view.fragment
 
 import com.linlangli.pangtouyu.view.fragment.BaseFragment
 import com.linlangli.walleter.R
-import com.linlangli.walleter.databinding.FragmentPlanBinding
+import com.linlangli.walleter.databinding.FragmentMineBinding
 import com.linlangli.walleter.utils.Loger
 
-class PlanFragment : BaseFragment<FragmentPlanBinding>(){
-    override fun layoutId() = R.layout.fragment_plan
+class MineFragment : BaseFragment<FragmentMineBinding>(){
+    override fun layoutId() = R.layout.fragment_mine
 
     override fun initVM() {
     }
@@ -17,6 +17,4 @@ class PlanFragment : BaseFragment<FragmentPlanBinding>(){
     override fun iniData() {
         Loger.e("ClockFragment")
     }
-
-    override fun navControllerId() = -1
 }

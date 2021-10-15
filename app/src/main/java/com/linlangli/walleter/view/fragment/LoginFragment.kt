@@ -1,16 +1,13 @@
 package com.linlangli.walleter.view.fragment
 
 import android.content.Context
-import android.content.Intent
 import android.view.View
 import androidx.lifecycle.lifecycleScope
-import com.linlangli.pangtouyu.net.NetException
 import com.linlangli.pangtouyu.view.fragment.BaseFragment
 import com.linlangli.walleter.R
 import com.linlangli.walleter.databinding.FragmentLoginBinding
 import com.linlangli.walleter.utils.Loger
 import com.linlangli.pangtouyu.utils.Toaster
-import com.linlangli.walleter.view.activity.MainActivity
 import com.linlangli.walleter.viewmodel.LoginViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -35,7 +32,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(){
             loginViewModel.loginSuccess.collect {
                 Loger.d("login", "loginSuccess change")
                 it?.let {
-                    startActivity(Intent(activity, MainActivity::class.java))
+                    nav(R.id.action_loginFragment_to_mainFragment)
                     activity?.finish()
                 }
             }
@@ -73,18 +70,21 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(){
             }
         }
         fun register(view : View) {
-            binder.editUser.hint = getString(R.string.login_password)
-            binder.editPassword.hint = getString(R.string.login_password_again)
-            binder.buttLogin.text = getString(R.string.register)
-            binder.textRegister.visibility = View.GONE
-            binder.textRetrievePass.visibility = View.GONE
-            registerState = true
+            if (registerState) {
+                binder.editUser.hint = getString(R.string.user_id)
+                binder.editPassword.hint = getString(R.string.user_password)
+                binder.buttLogin.text = getString(R.string.login)
+                binder.textRegister.text = getString(R.string.register)
+                registerState = false
+            } else {
+                binder.editUser.hint = getString(R.string.login_password)
+                binder.editPassword.hint = getString(R.string.login_password_again)
+                binder.buttLogin.text = getString(R.string.register)
+                binder.textRegister.text = getString(R.string.login)
+                registerState = true
+            }
         }
         // 暂时不支持找回密码
-        fun retrievePassword(view : View) {
-
-        }
+        fun retrievePassword(view : View) {}
     }
-
-    override fun navControllerId() = -1
 }

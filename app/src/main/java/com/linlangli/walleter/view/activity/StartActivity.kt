@@ -14,7 +14,8 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
         Timer().schedule(object: TimerTask(){
             override fun run() {
                 Loger.e("schedule")
-//                startActivity(Intent(this@StartActivity, MainActivity::class.java))
+                startActivity(Intent(this@StartActivity, MainActivity::class.java))
+                finish()
             }
         },3000)
     }
@@ -24,6 +25,5 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
 
     override fun navControllerId() = -1
 
-    override fun initVM() {
-    }
+    override fun initVM(){}
 }

@@ -17,6 +17,4 @@ class AssetsFragment : BaseFragment<FragmentAssetsBinding>(){
     override fun iniData() {
         Loger.e("AssetsFragment")
     }
-
-    override fun navControllerId() = -1
 }
