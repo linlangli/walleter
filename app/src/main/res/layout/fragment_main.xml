@@ -39,7 +39,7 @@
         <ImageView
             android:id="@+id/image_bill"
             android:layout_width="0dp"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:src="@{mainViewModel.selected == &quot;bill&quot;?@drawable/ic_bill_selected:@drawable/ic_bill}"
             android:paddingBottom="2dp"
             app:layout_constraintBottom_toTopOf="@+id/text_bill"
@@ -49,10 +49,10 @@
         <TextView
             android:id="@+id/text_bill"
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="wrap_content"
             android:text="@string/bottom_bar_main"
             android:gravity="center"
-            android:textSize="8sp"
+            android:textSize="9sp"
             tools:ignore="SmallSp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         <ImageView
             android:id="@+id/image_chart"
             android:layout_width="0dp"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:src="@{mainViewModel.selected == &quot;chart&quot;?@drawable/ic_chart_selected:@drawable/ic_chart}"
             app:layout_constraintBottom_toTopOf="@id/text_chart"
             app:layout_constraintStart_toStartOf="@id/text_chart"
@@ -70,10 +70,10 @@
         <TextView
             android:id="@+id/text_chart"
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="wrap_content"
             android:text="@string/bottom_bar_chart"
             android:gravity="center"
-            android:textSize="8sp"
+            android:textSize="9sp"
             tools:ignore="SmallSp"
             app:layout_constraintStart_toEndOf="@id/text_bill"
             app:layout_constraintEnd_toStartOf="@id/text_assets"
@@ -82,7 +82,7 @@
         <ImageView
             android:id="@+id/image_assets"
             android:layout_width="0dp"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:src="@{mainViewModel.selected == &quot;assets&quot;?@drawable/ic_assets_selected:@drawable/ic_assets}"
             app:layout_constraintBottom_toTopOf="@id/text_assets"
             app:layout_constraintStart_toStartOf="@id/text_assets"
@@ -91,10 +91,10 @@
         <TextView
             android:id="@+id/text_assets"
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="wrap_content"
             android:text="@string/bottom_bar_assets"
             android:gravity="center"
-            android:textSize="8sp"
+            android:textSize="9sp"
             tools:ignore="SmallSp"
             app:layout_constraintStart_toEndOf="@id/text_chart"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -103,7 +103,7 @@
         <ImageView
             android:id="@+id/image_mine"
             android:layout_width="0dp"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:src="@{mainViewModel.selected == &quot;mine&quot;?@drawable/ic_plan_selected:@drawable/ic_plan}"
             app:layout_constraintBottom_toTopOf="@id/text_mine"
             app:layout_constraintEnd_toEndOf="@+id/text_mine"
@@ -112,10 +112,10 @@
         <TextView
             android:id="@+id/text_mine"
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="wrap_content"
             android:text="@string/bottom_bar_mine"
             android:gravity="center"
-            android:textSize="8sp"
+            android:textSize="9sp"
             tools:ignore="SmallSp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/text_assets"
@@ -124,7 +124,7 @@
         <View
             android:id="@+id/view_bill"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             app:layout_constraintStart_toStartOf="@id/text_bill"
             app:layout_constraintEnd_toEndOf="@id/text_bill"
             app:layout_constraintBottom_toBottomOf="@id/text_bill"
@@ -133,7 +133,7 @@
         <View
             android:id="@+id/view_chart"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             app:layout_constraintStart_toStartOf="@id/text_chart"
             app:layout_constraintEnd_toEndOf="@id/text_chart"
             app:layout_constraintBottom_toBottomOf="@id/text_chart"
@@ -142,7 +142,7 @@
         <View
             android:id="@+id/view_assets"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             app:layout_constraintEnd_toEndOf="@id/text_assets"
             app:layout_constraintStart_toStartOf="@id/text_assets"
             app:layout_constraintBottom_toBottomOf="@id/text_assets"
@@ -151,7 +151,7 @@
         <View
             android:id="@+id/view_mine"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             app:layout_constraintEnd_toEndOf="@id/text_mine"
             app:layout_constraintStart_toStartOf="@id/text_mine"
             app:layout_constraintBottom_toBottomOf="parent"

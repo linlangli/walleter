@@ -33,7 +33,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(){
                 Loger.d("login", "loginSuccess change")
                 it?.let {
                     nav(R.id.action_loginFragment_to_mainFragment)
-                    activity?.finish()
                 }
             }
         }
