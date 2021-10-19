@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">胖鱼记账</string>
+    <string name="app_name">皮蛋记账</string>
     <string name="bottom_bar_main">账单</string>
     <string name="bottom_bar_chart">图表</string>
     <string name="bottom_bar_assets">资产</string>
@@ -17,4 +17,5 @@
     <string name="retrieve_password">找回密码</string>
     <string name="login_password">请输入登录密码</string>
     <string name="login_password_again">再次输入登录密码</string>
+    <string name="customer_service">客服</string>
 </resources>

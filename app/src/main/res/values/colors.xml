@@ -10,4 +10,7 @@
     <color name="theme_light">#8a8c8e</color>
     <color name="theme_dart">#426ab3</color>
     <color name="theme_dart_yellow">#FFCF06</color>
+    <color name="theme_black">#000000</color>
+    <color name="price_value">#281f1d</color>
+    <color name="theme_orange">#F5715A</color>
 </resources>

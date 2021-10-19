@@ -56,7 +56,7 @@
             tools:ignore="SmallSp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/text_chart" />
+            app:layout_constraintEnd_toStartOf="@id/text_chart"/>
 
         <ImageView
             android:id="@+id/image_chart"
@@ -104,7 +104,7 @@
             android:id="@+id/image_mine"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:src="@{mainViewModel.selected == &quot;mine&quot;?@drawable/ic_plan_selected:@drawable/ic_plan}"
+            android:src="@{mainViewModel.selected == &quot;mine&quot;?@drawable/ic_mine_selected:@drawable/ic_mine}"
             app:layout_constraintBottom_toTopOf="@id/text_mine"
             app:layout_constraintEnd_toEndOf="@+id/text_mine"
             app:layout_constraintStart_toStartOf="@id/text_mine"
@@ -120,6 +120,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/text_assets"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_customer_service"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view_bottom_bar_line"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/customer_service" />
 
         <View
             android:id="@+id/view_bill"

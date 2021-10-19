@@ -9,9 +9,26 @@
         <entry key="app/src/main/res/drawable/ic_assets_selected.xml" value="0.5927083333333333" />
         <entry key="app/src/main/res/drawable/ic_bill.xml" value="0.5824074074074074" />
         <entry key="app/src/main/res/drawable/ic_bill_selected.xml" value="0.5824074074074074" />
+        <entry key="app/src/main/res/drawable/ic_chart.xml" value="0.5398148148148149" />
         <entry key="app/src/main/res/drawable/ic_chart_selected.xml" value="0.5927083333333333" />
+        <entry key="app/src/main/res/drawable/ic_customer_service.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_customer_service_toolbar.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_entertainment.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_get_money.xml" value="0.5398148148148149" />
         <entry key="app/src/main/res/drawable/ic_main.xml" value="0.5835897435897436" />
+        <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_mine.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_mine_selected.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_money_bag.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_open.xml" value="0.5342592592592592" />
         <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.5927083333333333" />
+        <entry key="app/src/main/res/drawable/ic_plan.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_plan_selected.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_renting.xml" value="0.5342592592592592" />
+        <entry key="app/src/main/res/drawable/ic_repast.xml" value="0.5342592592592592" />
+        <entry key="app/src/main/res/drawable/ic_time.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_unknow.xml" value="0.5398148148148149" />
+        <entry key="app/src/main/res/drawable/ic_wallet.xml" value="0.5398148148148149" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4793863854266539" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.5435185185185185" />
         <entry key="app/src/main/res/layout/fragment_assets.xml" value="0.328125" />
@@ -19,16 +36,19 @@
         <entry key="app/src/main/res/layout/fragment_chart.xml" value="0.5435185185185185" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.5416666666666666" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_mine.xml" value="0.5911458333333334" />
         <entry key="app/src/main/res/layout/fragment_plan.xml" value="0.5765625" />
         <entry key="app/src/main/res/layout/fragment_start.xml" value="0.5416666666666666" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.5435185185185185" />
-        <entry key="app/src/main/res/layout/item_main.xml" value="0.328125" />
+        <entry key="app/src/main/res/layout/item_bill.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_bill_title.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/widget_bottom_bar.xml" value="0.5765625" />
         <entry key="app/src/main/res/layout/widget_toolbar.xml" value="0.5435185185185185" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
