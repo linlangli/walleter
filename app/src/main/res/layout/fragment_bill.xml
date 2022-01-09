@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="bill"
+            type="com.linlangli.walleter.model.Bill" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

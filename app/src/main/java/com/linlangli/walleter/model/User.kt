@@ -10,6 +10,6 @@ data class User(
     val bankCard: List<BankCard>? = null
 ) {
     override fun toString(): String {
-        return "User | userid: $userid | password: $password | username: $username | outlay: $outlay | income: $income | balance: $balance | bankCard: ${bankCard.toString()}"
+        return "User { userid: $userid | password: $password | username: $username | outlay: $outlay | income: $income | balance: $balance | bankCard: ${bankCard.toString()} }"
     }
 }
