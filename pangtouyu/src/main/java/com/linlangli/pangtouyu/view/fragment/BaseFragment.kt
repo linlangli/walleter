@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.linlangli.pangtouyu.viewmodel.BaseViewModel
+import com.linlangli.walleter.utils.Loger
 
 abstract class BaseFragment<DB : ViewDataBinding> : Fragment() {
 
@@ -28,6 +29,7 @@ abstract class BaseFragment<DB : ViewDataBinding> : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Loger.d("test branch")
         initVM()
         iniData()
         iniView()
